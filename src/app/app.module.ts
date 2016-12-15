@@ -20,4 +20,6 @@ import { CampaignListService } from './campaign-list/campaign-list.service';
   providers: [CampaignListService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

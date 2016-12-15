@@ -11,7 +11,8 @@ export class CampaignListService {
 
   getCampaigns(): Observable<any[]> {
     console.log('> data here');
-    return this.http.get('https://rest-sample.herokuapp.com/api/campaigns').map(this.extractData);
+    return this.http.get('https://rest-sample.herokuapp.com/api/campaigns')
+    .map((res:Response)=>res.json());
   }
 
   private extractData(res: Response) {
