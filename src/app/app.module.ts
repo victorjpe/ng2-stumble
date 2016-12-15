@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CampaignListComponent } from './campaign-list/campaign-list.component';
 import { CampaignListService } from './campaign-list/campaign-list.service';
+import { CampaignFormComponent } from './campaign-form/campaign-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CampaignListComponent
+    CampaignListComponent,
+    CampaignFormComponent
   ],
   imports: [
     BrowserModule,

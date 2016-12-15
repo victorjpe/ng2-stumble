@@ -29,3 +29,18 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Tips on the learn
+
+1. Don't install Bootstrap via `npm install`. (Wait for a better tutorial)
+2. Font-awesome : install iva `npm install --save` and add `styles` and `addons`. Refer `angular-cli.json` file.
+
+## To do:
+
+1. Routing
+1. Model needed in client side? If so, the same can be obtained from the `Swagger`
+1. Test driven approach, e2e, unit testing, etc... Refer `ng help` to understand all the tdd approach available
+1. Master-detail form transaction
+1. Drill down
+1. Deploy to Github
+1. Augery
