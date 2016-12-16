@@ -4,9 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { CampaignListComponent } from './campaign-list/campaign-list.component';
-import { CampaignListService } from './campaign-list/campaign-list.service';
-import { CampaignFormComponent } from './campaign-form/campaign-form.component';
+import { CampaignListComponent } from './campaign/campaign-list/campaign-list.component';
+import { CampaignFormComponent } from './campaign/campaign-form/campaign-form.component';
+
+import { CampaignListService } from './campaign/campaign-list/campaign-list.service';
+
 
 @NgModule({
   declarations: [
