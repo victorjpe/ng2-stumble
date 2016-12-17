@@ -5,8 +5,6 @@ import { HttpModule } from '@angular/http';
 import { CampaignService } from './campaign.service';
 import { ApiService, JwtService } from '../shared/index';
 
-const GUID = "8ce111f2-1b8e-4a51-bb56-a383c14739da";
-
 describe('Service: Campaign', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
