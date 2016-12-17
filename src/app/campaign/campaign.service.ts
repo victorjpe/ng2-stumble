@@ -17,14 +17,16 @@ export class CampaignService {
   }
 
   deleteCampaign(campaignId): Observable<Campaign> {
-    return null;
+    return this.apiService
+      .delete('campaigns', campaignId);
   }
 
-  getCampaigns(): Observable<Campaign> {
-    return null;
+  getCampaigns(): Observable<Campaign[]> {
+    return this.apiService.get('campaigns');
   }
 
   getCampaign(campaignId): Observable<Campaign> {
-    return null;
+    return this.apiService.get('campaigns', campaignId);
+
   }
 }

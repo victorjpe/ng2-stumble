@@ -41,7 +41,7 @@ describe('Service: Campaign', () => {
   })));
 
 
-  xit('should update campaign', async(inject([CampaignService], (service: CampaignService) => {
+  it('should update campaign', async(inject([CampaignService], (service: CampaignService) => {
     const campaign = {
       "startDate": "2016-12-16",
       "dueDate": "2016-12-31",
@@ -62,28 +62,29 @@ describe('Service: Campaign', () => {
     })
   })));
 
-  xit('should get the new campaign', async(inject([CampaignService], (service: CampaignService) => {
-    service.getCampaign("please-dont-delete").subscribe(c => {
+  it('should get the new campaign', async(inject([CampaignService], (service: CampaignService) => {
+    service.getCampaign("please-dont-delete").subscribe(campaign => {
+      let c = campaign[0];
       expect(c).toBeTruthy();
-      expect(c).toBeLessThanOrEqual(1);
       expect(c.id).toBe("please-dont-delete");
+      expect(c.description).toBe("Test data automated and updated");
     }, error => {
       console.log(error);
       expect(error).toBeUndefined();
     })
   })));
 
-  xit('should get all the campaigns', async(inject([CampaignService], (service: CampaignService) => {
+  it('should get all the campaigns', async(inject([CampaignService], (service: CampaignService) => {
     service.getCampaigns().subscribe(c => {
       expect(c).toBeTruthy();
-      expect(c).toBeGreaterThan(1);
+      expect(c.length).toBeGreaterThanOrEqual(1);
     }, error => {
       console.log(error);
       expect(error).toBeUndefined();
     })
   })));
 
-  xit('should delete a campaign', async(inject([CampaignService], (service: CampaignService) => {
+  it('should delete a campaign', async(inject([CampaignService], (service: CampaignService) => {
     service.deleteCampaign("please-dont-delete").subscribe(c => {
     }, error => {
       console.log(error);

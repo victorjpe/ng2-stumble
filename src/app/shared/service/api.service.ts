@@ -57,11 +57,8 @@ export class ApiService {
       .map((res: Response) => res.json());
   }
 
-  delete(path): Observable<any> {
-    return this.http.delete(
-      `${environment.api_url}${path}`,
-      { headers: this.setHeaders() }
-    )
+  delete(path: String, id: String): Observable<any> {
+    return this.http.delete(`${environment.api_url}${path}/${id}`, { headers: this.setHeaders() })
       .catch(this.formatErrors)
       .map((res: Response) => res.json());
   }
