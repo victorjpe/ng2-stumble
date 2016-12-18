@@ -21,8 +21,8 @@ export class CampaignService {
       .delete('campaigns', campaignId);
   }
 
-  getCampaigns(filter = ''): Observable<Campaign[]> {
-    return this.apiService.get('campaigns', filter);
+  getCampaigns(): Observable<Campaign[]> {
+    return this.apiService.get('campaigns');
   }
 
   getCampaign(campaignId): Observable<Campaign> {
