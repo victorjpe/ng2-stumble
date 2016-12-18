@@ -2,7 +2,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpModule } from '@angular/http';
 import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { DebugElement, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { CampaignListComponent, CampaignService } from '../index';
 import { ApiService, JwtService } from '../../shared/index';
@@ -15,7 +15,8 @@ describe('CampaignListComponent', () => {
     TestBed.configureTestingModule({
       declarations: [CampaignListComponent],
       imports: [HttpModule],
-      providers: [CampaignService, ApiService, JwtService]
+      providers: [CampaignService, ApiService, JwtService],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA]
     })
       .compileComponents();
   }));

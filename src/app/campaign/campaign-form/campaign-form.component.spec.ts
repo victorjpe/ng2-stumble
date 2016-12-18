@@ -11,9 +11,9 @@ describe('CampaignFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CampaignFormComponent ]
+      declarations: [CampaignFormComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

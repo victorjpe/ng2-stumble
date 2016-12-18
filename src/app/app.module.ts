@@ -1,12 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { CampaignListComponent } from './campaign/campaign-list/campaign-list.component';
 import { CampaignFormComponent } from './campaign/campaign-form/campaign-form.component';
-import { CampaignService } from './campaign/index';
+import { CampaignService, CampaignListComponent } from './campaign/index';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { ApiService, JwtService } from './shared/index';
@@ -30,6 +29,7 @@ CampaignService
     ApiService,
     JwtService
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule {
