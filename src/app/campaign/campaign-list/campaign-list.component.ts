@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CampaignService } from '../index';
 
 @Component({
   selector: 'campaign-list',
@@ -9,14 +8,14 @@ import { CampaignService } from '../index';
 export class CampaignListComponent implements OnInit {
   campaigns = [];
 
-  constructor(private CampaignService: CampaignService) { }
+  constructor() { }
 
   ngOnInit() {
     this.getCampaigns();
   }
 
   getCampaigns() {
-    this.CampaignService.getCampaigns().subscribe(c => this.campaigns = c);
+
   }
 
 }
