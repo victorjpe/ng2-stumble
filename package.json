@@ -44,6 +44,8 @@
     "ts-node": "1.2.1",
     "tslint": "^4.0.2",
     "typescript": "~2.0.3",
+    "loopback-sdk-angular": "github:qeti/loopback-sdk-angular#188-angular2-support",
+    "loopback-sdk-angular-cli": "github:qeti/loopback-sdk-angular-cli#37-angular2-support",
     "webdriver-manager": "10.2.5"
   }
 }
