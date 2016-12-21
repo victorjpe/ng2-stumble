@@ -36,12 +36,11 @@ describe('Service: Campaign', () => {
       expect(c.id).toBeTruthy();
     }, error => {
       console.log(error);
-      expect(error).toBeUndefined();
     })
   })));
 
 
-  xit('should update campaign', async(inject([CampaignService], (service: CampaignService) => {
+  it('should update campaign', async(inject([CampaignService], (service: CampaignService) => {
     const campaign = {
       "startDate": "2016-12-16",
       "dueDate": "2016-12-31",
@@ -56,38 +55,49 @@ describe('Service: Campaign', () => {
     service.saveCampaign(campaign).subscribe(c => {
       expect(c).toBeTruthy();
       expect(c.id).toBeTruthy();
+      expect(c.description).toBe("Test data automated and updated");
     }, error => {
       console.log(error);
-      expect(error).toBeUndefined();
     })
   })));
 
-  xit('should get the new campaign', async(inject([CampaignService], (service: CampaignService) => {
+  it('should get the new campaign', async(inject([CampaignService], (service: CampaignService) => {
     service.getCampaign("please-dont-delete").subscribe(c => {
       expect(c).toBeTruthy();
-      expect(c).toBeLessThanOrEqual(1);
       expect(c.id).toBe("please-dont-delete");
     }, error => {
       console.log(error);
-      expect(error).toBeUndefined();
     })
   })));
 
-  xit('should get all the campaigns', async(inject([CampaignService], (service: CampaignService) => {
+  it('should get all the campaigns', async(inject([CampaignService], (service: CampaignService) => {
     service.getCampaigns().subscribe(c => {
       expect(c).toBeTruthy();
-      expect(c).toBeGreaterThan(1);
+      expect(c.length).toBeGreaterThan(1);
     }, error => {
       console.log(error);
-      expect(error).toBeUndefined();
     })
   })));
 
-  xit('should delete a campaign', async(inject([CampaignService], (service: CampaignService) => {
+  it('should get all the campaigns sorted in asc order', async(inject([CampaignService], (service: CampaignService) => {
+    let filter = {
+      order: "description asc"
+    };
+    service.getCampaigns(filter).subscribe(c => {
+      let array = c.map(q => q.description).sort();
+      for (let i = 0; i < c.length; i++) {
+
+        expect(c[i].description).toBe(array[i]);
+      }
+    }, error => {
+      console.log(error);
+    })
+  })));
+
+  it('should delete a campaign', async(inject([CampaignService], (service: CampaignService) => {
     service.deleteCampaign("please-dont-delete").subscribe(c => {
     }, error => {
       console.log(error);
-      expect(error).toBeUndefined();
     })
   })));
 

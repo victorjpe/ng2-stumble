@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
+import { URLSearchParams } from '@angular/http';
+
 
 import { Campaign, ApiService } from '../shared/index';
 
@@ -8,23 +10,22 @@ export class CampaignService {
 
   constructor(
     private apiService: ApiService
-  ) {
-
-  }
+  ) { }
 
   saveCampaign(payload): Observable<any> {
     return this.apiService.put('campaigns', payload);
   }
 
-  deleteCampaign(campaignId): Observable<Campaign> {
-    return null;
+  deleteCampaign(campaignId): Observable<any> {
+    return this.apiService.delete(`campaigns/${campaignId}`);
   }
 
-  getCampaigns(): Observable<Campaign> {
-    return null;
+  getCampaigns(filter: Object = {}): Observable<Campaign[]> {
+    return this.apiService.get('campaigns', JSON.stringify(filter));
   }
 
   getCampaign(campaignId): Observable<Campaign> {
-    return null;
+    let url = `campaigns/${campaignId}`;
+    return this.apiService.get(url);
   }
 }
