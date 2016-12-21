@@ -22,7 +22,6 @@ export class ApiService {
 
     if (this.jwtService.getToken()) {
       headersConfig['Authorization'] = this.jwtService.getToken();
-      // headersConfig['Authorization'] = `Token ${this.jwtService.getToken()}`;
     }
     return new Headers(headersConfig);
   }
@@ -35,7 +34,6 @@ export class ApiService {
     let params = new URLSearchParams();
     if (filter.trim().length > 0)
       params.set('filter', filter);
-    console.log('> params', params);
     return this.http.get(
       `${environment.api_url}${path}`,
       { headers: this.setHeaders(), search: params }
