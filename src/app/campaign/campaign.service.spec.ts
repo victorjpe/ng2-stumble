@@ -40,7 +40,6 @@ describe('Service: Campaign', () => {
     })
   })));
 
-
   it('should update campaign', async(inject([CampaignService], (service: CampaignService) => {
     const campaign = {
       "startDate": "2016-12-16",
@@ -90,7 +89,6 @@ describe('Service: Campaign', () => {
     service.getCampaigns(filter).subscribe(c => {
       let array = c.map(q => q.description).sort();
       for (let i = 0; i < c.length; i++) {
-
         expect(c[i].description).toBe(array[i]);
       }
     }, error => {
