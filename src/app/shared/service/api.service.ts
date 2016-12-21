@@ -33,7 +33,9 @@ export class ApiService {
 
   get(path: string, filter: string = ''): Observable<any> {
     let params = new URLSearchParams();
-    params.set('filter', filter);
+    if (filter.trim().length > 0)
+      params.set('filter', filter);
+    console.log('> params', params);
     return this.http.get(
       `${environment.api_url}${path}`,
       { headers: this.setHeaders(), search: params }

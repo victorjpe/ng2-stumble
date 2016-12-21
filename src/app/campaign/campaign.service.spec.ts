@@ -36,6 +36,7 @@ describe('Service: Campaign', () => {
       expect(c.id).toBeTruthy();
     }, error => {
       console.log(error);
+      expect(error).toBeNull();
     })
   })));
 
@@ -58,6 +59,7 @@ describe('Service: Campaign', () => {
       expect(c.description).toBe("Test data automated and updated");
     }, error => {
       console.log(error);
+      expect(error).toBeNull();
     })
   })));
 
@@ -67,6 +69,7 @@ describe('Service: Campaign', () => {
       expect(c.id).toBe("please-dont-delete");
     }, error => {
       console.log(error);
+      expect(error).toBeNull();
     })
   })));
 
@@ -76,6 +79,7 @@ describe('Service: Campaign', () => {
       expect(c.length).toBeGreaterThan(1);
     }, error => {
       console.log(error);
+      expect(error).toBeNull();
     })
   })));
 
@@ -91,6 +95,7 @@ describe('Service: Campaign', () => {
       }
     }, error => {
       console.log(error);
+      expect(error).toBeNull();
     })
   })));
 
@@ -98,6 +103,7 @@ describe('Service: Campaign', () => {
     service.deleteCampaign("please-dont-delete").subscribe(c => {
     }, error => {
       console.log(error);
+      expect(error).toBeNull();
     })
   })));
 
