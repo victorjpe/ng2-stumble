@@ -6,7 +6,6 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CampaignListComponent } from './campaign/campaign-list/campaign-list.component';
 import { CampaignFormComponent } from './campaign/campaign-form/campaign-form.component';
-import { CampaignListService } from './campaign/campaign-list/campaign-list.service';
 import { CampaignService } from './campaign/index';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -27,7 +26,6 @@ CampaignService
     HttpModule
   ],
   providers: [
-    CampaignListService,
     CampaignService,
     ApiService,
     JwtService
