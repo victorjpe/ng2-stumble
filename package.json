@@ -1,0 +1,50 @@
+{
+  "name": "hero-app",
+  "version": "0.0.0",
+  "license": "MIT",
+  "angular-cli": {},
+  "scripts": {
+    "start": "ng serve",
+    "lint": "tslint \"src/**/*.ts\"",
+    "test": "ng test",
+    "pree2e": "webdriver-manager update",
+    "e2e": "protractor"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "*",
+    "@angular/compiler": "*",
+    "@angular/core": "*",
+    "@angular/forms": "*",
+    "@angular/http": "*",
+    "@angular/platform-browser": "*",
+    "@angular/platform-browser-dynamic": "*",
+    "@angular/router": "*",
+    "angular2-text-mask": "^2.1.0",
+    "bootstrap": "*",
+    "core-js": "*",
+    "font-awesome": "*",
+    "rxjs": "*",
+    "ts-helpers": "*",
+    "zone.js": "*"
+  },
+  "devDependencies": {
+    "@angular/compiler-cli": "*",
+    "@types/jasmine": "*",
+    "@types/node": "*",
+    "angular-cli": "*",
+    "codelyzer": "*",
+    "jasmine-core": "*",
+    "jasmine-spec-reporter": "*",
+    "karma": "*",
+    "karma-chrome-launcher": "*",
+    "karma-cli": "*",
+    "karma-jasmine": "*",
+    "karma-remap-istanbul": "*",
+    "protractor": "*",
+    "ts-node": "*",
+    "tslint": "*",
+    "typescript": "*",
+    "webdriver-manager": "*"
+  }
+}
