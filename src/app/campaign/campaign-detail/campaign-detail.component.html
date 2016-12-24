@@ -1,0 +1,38 @@
+<div class="page-header">
+  <h1>Campaign
+    <small> {{ campaign.description }}</small>
+  </h1>
+</div>
+<ul class="list-group">
+  <li class="list-group-item">
+    <label class="text-danger">Start Date </label>
+    <p class="text-primary strong">{{campaign.startDate}}</p>
+  </li>
+  <li class="list-group-item">
+    <label class="text-danger">Due Date</label>
+    <p class="text-primary strong">{{campaign.dueDate}}</p>
+  </li>
+  <li class="list-group-item">
+    <label class="text-danger">Promised Investment </label>
+    <p class="text-primary strong">{{campaign.promisedInvestment}}</p>
+  </li>
+  <li class="list-group-item">
+    <label class="text-danger">Investment </label>
+    <p class="text-primary strong">{{campaign.investment}}</p>
+  </li>
+  <li class="list-group-item">
+    <label class="text-danger">Status </label>
+    <p class="text-primary strong">{{campaign.status}}</p>
+  </li>
+  <li class="list-group-item" *ngIf="campaign.adhoc">
+    <label class="text-danger">Ad hoc </label>
+    <p class="text-primary strong">This is a
+      <u>adhoc</u> campaign.</p>
+  </li>
+</ul>
+<section class="pull-right">
+  <button type="button" class="btn btn-default">
+    <i class="fa fa-pencil"></i> Edit</button>
+  <button type="button" class="btn btn-danger" (click)=deleteCampaign()>
+    <i class="fa fa-trash"></i> Delete</button>
+</section>

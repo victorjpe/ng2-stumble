@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { CampaignService } from '../index';
 
 @Component({
@@ -8,6 +9,7 @@ import { CampaignService } from '../index';
 })
 export class CampaignListComponent implements OnInit {
   campaigns = [];
+  loading = true;
 
   constructor(private CampaignService: CampaignService) { }
 
@@ -19,7 +21,14 @@ export class CampaignListComponent implements OnInit {
     let filter = {
       order: "description asc"
     };
-    this.CampaignService.getCampaigns(filter).subscribe(c => this.campaigns = c);
-  }
 
+    this.CampaignService.getCampaigns(filter).subscribe(c => {
+      this.campaigns = c;
+      this.loading = false;
+    });
+
+    this.CampaignService.getCampaign('appy').subscribe(a => {
+      console.log('> appy', a);
+    })
+  }
 }
