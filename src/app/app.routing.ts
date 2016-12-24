@@ -7,7 +7,9 @@ import { CampaignListComponent, CampaignFormComponent, CampaignDetailComponent }
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'campaign', component: CampaignListComponent },
-  { path: 'campaign/:id', component: CampaignDetailComponent }
+  { path: 'campaign/:id', component: CampaignDetailComponent },
+  { path: 'campaign-add', component: CampaignFormComponent },
+  { path: 'campaign-edit/:id', component: CampaignFormComponent }
 ];
 
 export const AppRoutes: ModuleWithProviders = RouterModule.forRoot(routes);

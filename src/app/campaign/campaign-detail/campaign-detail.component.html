@@ -6,19 +6,27 @@
 <ul class="list-group">
   <li class="list-group-item">
     <label class="text-danger">Start Date </label>
-    <p class="text-primary strong">{{campaign.startDate}}</p>
+    <p class="text-primary strong">{{campaign.startDate | date:'dd-MMM-y' }}
+      <kbd class="pull-right">campaign.startDate | date:'dd-MMM-y'</kbd>
+    </p>
   </li>
   <li class="list-group-item">
     <label class="text-danger">Due Date</label>
-    <p class="text-primary strong">{{campaign.dueDate}}</p>
+    <p class="text-primary strong">{{campaign.dueDate | date:'mediumDate'}}
+      <kbd class="pull-right">campaign.dueDate | date:'mediumDate'</kbd>
+    </p>
   </li>
   <li class="list-group-item">
     <label class="text-danger">Promised Investment </label>
-    <p class="text-primary strong">{{campaign.promisedInvestment}}</p>
+    <p class="text-primary strong">{{campaign.promisedInvestment | currency}}
+      <kbd class="pull-right">campaign.promisedInvestment | currency</kbd>
+    </p>
   </li>
   <li class="list-group-item">
     <label class="text-danger">Investment </label>
-    <p class="text-primary strong">{{campaign.investment}}</p>
+    <p class="text-primary strong">{{campaign.investment | currency:'USD':true }}
+      <kbd class="pull-right">campaign.promisedInvestment | currency:'USD':true</kbd>
+    </p>
   </li>
   <li class="list-group-item">
     <label class="text-danger">Status </label>
@@ -31,8 +39,8 @@
   </li>
 </ul>
 <section class="pull-right">
-  <button type="button" class="btn btn-default">
-    <i class="fa fa-pencil"></i> Edit</button>
+  <a class="btn btn-success" role="button" [routerLink]="['/campaign-edit', campaign.id]">
+    <i class="fa fa-pencil"></i>&nbsp;Edit</a>
   <button type="button" class="btn btn-danger" (click)=deleteCampaign()>
     <i class="fa fa-trash"></i> Delete</button>
 </section>

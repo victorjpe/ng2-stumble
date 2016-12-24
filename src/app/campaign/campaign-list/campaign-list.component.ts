@@ -26,9 +26,5 @@ export class CampaignListComponent implements OnInit {
       this.campaigns = c;
       this.loading = false;
     });
-
-    this.CampaignService.getCampaign('appy').subscribe(a => {
-      console.log('> appy', a);
-    })
   }
 }

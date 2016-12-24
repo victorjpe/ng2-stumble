@@ -15,7 +15,6 @@ import { AppRoutes } from './app.routing';
 import { CampaignDetailComponent } from './campaign/campaign-detail/campaign-detail.component';
 
 
-CampaignService
 @NgModule({
   declarations: [
     AppComponent,
