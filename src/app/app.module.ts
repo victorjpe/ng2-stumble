@@ -13,6 +13,7 @@ import { CampaignListComponent } from './campaign/campaign-list/campaign-list.co
 import { CampaignPageComponent } from './campaign/campaign-page/campaign-page.component';
 import { CampaignService } from './shared/service/campaign.service';
 import { CampaignDetailComponent } from './campaign/campaign-detail/campaign-detail.component';
+import { CampaignFormComponent } from './campaign/campaign-form/campaign-form.component';
 
 
 
@@ -22,7 +23,8 @@ import { CampaignDetailComponent } from './campaign/campaign-detail/campaign-det
     DashboardComponent,
     CampaignListComponent,
     CampaignPageComponent,
-    CampaignDetailComponent
+    CampaignDetailComponent,
+    CampaignFormComponent
 ],
   imports: [
     BrowserModule,
