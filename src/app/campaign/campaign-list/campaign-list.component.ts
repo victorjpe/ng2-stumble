@@ -8,7 +8,9 @@ import { Campaign } from '../../shared/index';
 })
 export class CampaignListComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+
+  ) { }
 
   ngOnInit() {
 
