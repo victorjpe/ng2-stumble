@@ -11,6 +11,9 @@ import { AppRoutes } from './app.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CampaignListComponent } from './campaign/campaign-list/campaign-list.component';
 import { CampaignPageComponent } from './campaign/campaign-page/campaign-page.component';
+import { CampaignService } from './shared/service/campaign.service';
+
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,7 @@ import { CampaignPageComponent } from './campaign/campaign-page/campaign-page.co
     DashboardComponent,
     CampaignListComponent,
     CampaignPageComponent
-],
+  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -28,7 +31,8 @@ import { CampaignPageComponent } from './campaign/campaign-page/campaign-page.co
   ],
   providers: [
     ApiService,
-    JwtService
+    JwtService,
+    CampaignService
   ],
   bootstrap: [
     AppComponent

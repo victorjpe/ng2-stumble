@@ -2,10 +2,8 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
 import { HttpModule } from '@angular/http';
-import { CampaignService } from './campaign.service';
 import { ApiService, JwtService } from '../index';
-
-const GUID = "8ce111f2-1b8e-4a51-bb56-a383c14739da";
+import { CampaignService } from './campaign.service';
 
 describe('Service: Campaign', () => {
   beforeEach(() => {

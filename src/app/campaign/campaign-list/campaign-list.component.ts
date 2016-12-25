@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Campaign } from '../../shared/index';
 
 @Component({
   selector: 'app-campaign-list',
@@ -12,5 +13,7 @@ export class CampaignListComponent implements OnInit {
   ngOnInit() {
 
   }
+
+  @Input() campaigns: Campaign[] = [];
 
 }
