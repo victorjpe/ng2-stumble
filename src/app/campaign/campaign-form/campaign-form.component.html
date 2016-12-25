@@ -1,0 +1,66 @@
+<div class="page-header" *ngIf="editMode">
+  <h1>Campaign
+    <small> {{ campaign.description }}</small>
+  </h1>
+</div>
+<div class="page-header" *ngIf="!editMode">
+  <h1>Campaign
+    <small> Create a new campaign</small>
+  </h1>
+</div>
+<div class="row">
+  <section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class="form-group">
+      <label for="inputDescription" class="control-label">Description:</label>
+      <div class="">
+        <input type="text" name="Description" id="inputDescription" class="form-control" [(ngModel)]="campaign.description"
+          required> </div>
+    </div>
+    <div class="form-group">
+      <label for="inputStartDate" class=" control-label">StartDate:</label>
+      <div class="">
+        <input type="date" name="StartDate" id="inputStartDate" class="form-control" [(ngModel)]="campaign.startDate" required> </div>
+    </div>
+    <div class="form-group">
+      <label for="inputDueDate" class=" control-label">DueDate:</label>
+      <div class="">
+        <input type="date" name="DueDate" id="inputDueDate" class="form-control" [(ngModel)]="campaign.dueDate" required> </div>
+    </div>
+  </section>
+  <section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class="form-group">
+      <label for="inputInvestment" class="control-label">Investment:</label>
+      <div class="">
+        <input type="text" name="Investment" id="inputInvestment" class="form-control" [(ngModel)]="campaign.investment" required> </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPromisedInvestment" class="control-label">PromisedInvestment:</label>
+      <div class="">
+        <input type="text" name="PromisedInvestment" id="inputPromisedInvestment" class="form-control" [(ngModel)]="campaign.promisedInvestment"
+          required> </div>
+    </div>
+    <div class="form-group">
+      <label for="inputStatus" class="control-label">Status:</label>
+      <div class="">
+        <input type="text" name="Status" id="inputStatus" class="form-control" [ngModel]="campaign.status" required> </div>
+    </div>
+  </section>
+  <section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class="form-group">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" [(ngModel)]="campaign.adhoc"> Ad-hoc </label>
+      </div>
+    </div>
+  </section>
+  <section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class=" pull-right">
+      <button type="button" class="btn btn-success" (click)="saveCampaign()">
+        <i class="fa fa-floppy-o"></i> Save</button>
+      <button type="button" class="btn btn-danger">
+        <i class="fa fa-ban"></i> Clear</button>
+      <button type="button" class="btn btn-info" (click)="createEmptyCampaign()">
+        <i class="fa fa-beer"></i> Create Empty Object</button>
+    </div>
+  </section>
+</div>
