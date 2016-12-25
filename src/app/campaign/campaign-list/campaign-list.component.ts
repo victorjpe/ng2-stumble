@@ -15,5 +15,6 @@ export class CampaignListComponent implements OnInit {
   }
 
   @Input() campaigns: Campaign[] = [];
+  @Input() loading: boolean = false;
 
 }

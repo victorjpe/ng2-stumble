@@ -9,6 +9,7 @@ import { CampaignService } from '../../shared/service/campaign.service';
 })
 export class CampaignPageComponent implements OnInit {
   campaigns: Campaign[] = [];
+  loading = false;
 
   constructor(
     private campaignService: CampaignService
@@ -19,6 +20,7 @@ export class CampaignPageComponent implements OnInit {
   }
 
   getCampaigns() {
+    this.loading = true;
     let filter = {
       order: 'description asc'
     }
@@ -26,6 +28,7 @@ export class CampaignPageComponent implements OnInit {
       campaigns.forEach(c => {
         this.campaigns.push(c);
       });
+      this.loading = false;
     });
   }
 
