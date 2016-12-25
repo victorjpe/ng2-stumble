@@ -12,6 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CampaignListComponent } from './campaign/campaign-list/campaign-list.component';
 import { CampaignPageComponent } from './campaign/campaign-page/campaign-page.component';
 import { CampaignService } from './shared/service/campaign.service';
+import { CampaignDetailComponent } from './campaign/campaign-detail/campaign-detail.component';
 
 
 
@@ -20,8 +21,9 @@ import { CampaignService } from './shared/service/campaign.service';
     AppComponent,
     DashboardComponent,
     CampaignListComponent,
-    CampaignPageComponent
-  ],
+    CampaignPageComponent,
+    CampaignDetailComponent
+],
   imports: [
     BrowserModule,
     FormsModule,
